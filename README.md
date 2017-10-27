@@ -11,22 +11,22 @@ License: GPL 3.0
 
 ## **System Architecture**
 
-#####**1. Input Email Dataset:**
+##### **1. Input Email Dataset:**
 The Email Analytics system currently supports three major Email Formats. They are EML, MBOX and PST. The current email data ingestion is done by providing absolute file/folder path of the email dataset. 
-#####**2. Email Ingestion & Processing Engine:**
+##### **2. Email Ingestion & Processing Engine:**
 This module reads raw email document and extract details like CC,BCC,SUBJECT,CONTENTs. It also interact with Diskoveror-TA to get Sentiment Result and Topic Modeling out of email document. It finally pushes the data to Neo4j Database.
-#####**3. Neo4j Server:**
+##### **3. Neo4j Server:**
 The Email Analytics system stores data into Neo4j Graph Database. The Neo4j can be used either in Embedded mode or with REST API. The current architecture uses Embedded Neo4j. In Embedded mode, we don't need to setup or start neo4j but Neo4j Native Java Library does that job. The database is persisted on local file system in specified folder. 
-#####**4. DiKoveror-TA Server:**
+##### **4. DiKoveror-TA Server:**
 The Email Analytics system uses DisKoveror-TA for processing Sentiment and Topic Modeling out of email document. The DisKoveror-TA is developed at Serendio and available open source. 
-#####**5. Command Line:**
+##### **5. Command Line:**
 The Email Analytics system perform email ingestion using command line. 
 
 
 ## **Getting Started**
 
 #### **Step1: Software Requirements**
-#####**Install following softwares:**
+##### **Install following softwares:**
 
     JDK (Version 8)
     Maven
